@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import random
 from time import sleep, time
 
 import smbus
@@ -117,6 +118,7 @@ class NumberDisplay(object):
         bottom_pause_time = .4
 
         while True:
+            print('Color:', color)
             x = 0
             while x < 1:
                 color[2] = x
@@ -128,6 +130,7 @@ class NumberDisplay(object):
                 self.set_color(color)
                 x -= 0.00390625
             sleep(bottom_pause_time)
+            color = [random.random(), random.random(), 0]
 
 
 if __name__ == '__main__':

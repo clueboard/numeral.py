@@ -1,5 +1,7 @@
 # Python module for the Clueboard RGB7Segment display.
 
+<center>![Animated gif showing display](rgb7segment_animated.gif)</center>
+
 This module provide support for using the RGB7Segment QWIIC display from Clueboard on your Raspberry Pi.
 
 ## Usage

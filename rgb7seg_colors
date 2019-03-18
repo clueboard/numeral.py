@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+import random
+from time import sleep
+
+from rgb7seg import NumberDisplay
+
+numeral = NumberDisplay()
+
+for color in sorted(numeral.colors):
+    if color == 'black':
+        continue
+    numeral.display('A', numeral.colors[color])
+    input('This color is %s. Press enter for the next color.' % color)
+numeral.display('')

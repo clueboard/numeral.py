@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+
+import random
+from time import sleep
+
+from rgb7seg import NumberDisplay
+
+numeral = NumberDisplay()
+
+for i in range(10):
+    while True:
+        color = random.choice(list(numeral.colors.keys()))
+        if color != 'black':
+            break
+    numeral.display(i, numeral.colors[color])
+    sleep(1)
+
+numeral.display()
